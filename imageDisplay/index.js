@@ -98,7 +98,6 @@ const styles = StyleSheet.create({
   },
 
   textStyle: {
-    fontFamily: 'Cera Pro',
     fontWeight: '500',
     position: 'absolute',
     left: '7.47%',
@@ -126,7 +125,6 @@ const styles = StyleSheet.create({
     left: hp(1),
   },
   cardStyle: {
-    fontFamily: 'Cera Pro',
     color: '#0A191E',
     position: 'absolute',
     top: hp(21),

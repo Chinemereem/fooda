@@ -46,30 +46,8 @@ function HomeScreen({icon}) {
               <DashFull
                 icon={<LunchIcon />}
                 title="Lunch"
-                onPress={() => setModalVisible(true)}>
-                <Pressable
-                  style={[styles.button, styles.buttonOpen]}
-                  onPress={() => setModalVisible(true)}>
-                  <View
-                    style={{
-                      fontSize: hp(2),
-                      fontWeight: '500',
-                      color: '#0A191E',
-                      marginTop: hp(5),
-                      marginLeft: hp(6),
-                    }}>
-                    <SemiBoldText
-                      title="Lunch"
-                      style={{
-                        fontSize: hp(2),
-                        fontWeight: '500',
-                        color: '#0A191E',
-                        marginTop: hp(2.4),
-                      }}
-                    />
-                  </View>
-                </Pressable>
-              </DashFull>
+                onPress={() => setModalVisible(true)}
+                style={[styles.button, styles.buttonOpen]}></DashFull>
 
               <DashFull title="Breakfast" imageSource={BreakFast} />
               <DashFull title="Desert" icon={<DesertIcon />} />

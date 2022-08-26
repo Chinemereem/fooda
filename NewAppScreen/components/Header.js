@@ -75,7 +75,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'red',
     lineHeight: 29,
-    fontFamily: 'Cera Pro',
   },
   viewStyle: {
     width: 60,

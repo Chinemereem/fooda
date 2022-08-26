@@ -38,9 +38,6 @@ export const FoodStyle = StyleSheet.create({
     borderRadius: 20,
     padding: 17,
     elevation: 2,
-    position: 'absolute',
-    top: hp(-6),
-    left: hp(13),
   },
   Justbutton: {
     borderRadius: 20,
@@ -52,7 +49,6 @@ export const FoodStyle = StyleSheet.create({
     backgroundColor: '#31B9CC',
     width: wp(20),
     height: hp(10),
-    alignItems: 'center',
   },
   buttonClose: {
     backgroundColor: '#31B9CC',
@@ -65,7 +61,6 @@ export const FoodStyle = StyleSheet.create({
     textAlign: 'center',
   },
   textStyle: {
-    fontFamily: 'Cera Pro',
     fontWeight: '700',
     fontSize: hp(3),
     lineHeight: hp(6),

@@ -9,7 +9,14 @@ import {
 } from 'react-native-responsive-screen';
 import * as colors from '../NewAppScreen';
 
-export const DashFull = ({title, icon, onPress, disabled, imageSource}) => (
+export const DashFull = ({
+  title,
+  icon,
+  onPress,
+  disabled,
+  imageSource,
+  style,
+}) => (
   <TouchableOpacity
     activeOpacity={0.8}
     disabled={disabled}
@@ -17,12 +24,24 @@ export const DashFull = ({title, icon, onPress, disabled, imageSource}) => (
     onPress={onPress}>
     <Card backgroundColor={colors.White2} style={styles.DashFullCard}>
       <FlexStack>
-        <View style={styles.DashFullIconContainer}>
+        <View
+          style={[
+            {
+              width: wp(20),
+              height: hp(10),
+              justifyContent: 'center',
+              alignItems: 'center',
+              backgroundColor: 'gray',
+              borderRadius: hp(2),
+            },
+            style,
+          ]}>
           <Image
             source={imageSource}
             resizeMode="contain"
             style={styles.iconStyle}
           />
+
           {icon}
         </View>
 
