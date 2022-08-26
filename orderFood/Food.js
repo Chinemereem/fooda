@@ -12,16 +12,17 @@ import {
 } from 'react-native';
 import {PizzaSlice, BreakFast} from '../assets/images';
 import {FoodStyle as styles} from './styles';
-import {Header} from 'react-native/Libraries/NewAppScreen';
+import {Header} from '../NewAppScreen';
 import {DashFull} from './Dash';
 import {FlexStack} from './View';
+import SearchInput from '../Text/SearchInput';
 import {Card} from './Card';
-import {DesertIcon, LunchIcon, XIcon} from '../SvgJs/svg';
+import {DesertIcon, LunchIcon, XIcon, SearchIcon} from '../SvgJs/svg';
+
 import DisplayAnImageWithStyle from '../imageDisplay/index';
 import {SemiBoldText} from '../Text';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {Colors} from '../NewAppScreen';
 import {heightPercentageToDP as hp} from 'react-native-responsive-screen';
-import FlexText from 'react-native/Libraries/NewAppScreen/components/FlexTextjs';
 
 function HomeScreen({icon}) {
   const [modalVisible, setModalVisible] = useState(false);
@@ -37,38 +38,39 @@ function HomeScreen({icon}) {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
+        <SearchInput icon={<SearchIcon />} />
         <Card style={styles.cardContainer}>
           <View style={styles.section}>
             <FlexStack justify="space-between" style={{flexWrap: 'wrap'}}>
               <DashFull title="Dinner" imageSource={PizzaSlice} />
-
-              <Pressable
-                style={[styles.button, styles.buttonOpen]}
+              <DashFull
+                icon={<LunchIcon />}
+                title="Lunch"
                 onPress={() => setModalVisible(true)}>
-                <LunchIcon
-                  style={{
-                    marginTop: hp(1),
-                  }}
-                />
-              </Pressable>
-              <View
-                style={{
-                  fontSize: hp(2),
-                  fontWeight: '500',
-                  color: '#0A191E',
-                  marginTop: hp(5),
-                  marginLeft: hp(6),
-                }}>
-                <SemiBoldText
-                  title="Lunch"
-                  style={{
-                    fontSize: hp(2),
-                    fontWeight: '500',
-                    color: '#0A191E',
-                    marginTop: hp(2.4),
-                  }}
-                />
-              </View>
+                <Pressable
+                  style={[styles.button, styles.buttonOpen]}
+                  onPress={() => setModalVisible(true)}>
+                  <View
+                    style={{
+                      fontSize: hp(2),
+                      fontWeight: '500',
+                      color: '#0A191E',
+                      marginTop: hp(5),
+                      marginLeft: hp(6),
+                    }}>
+                    <SemiBoldText
+                      title="Lunch"
+                      style={{
+                        fontSize: hp(2),
+                        fontWeight: '500',
+                        color: '#0A191E',
+                        marginTop: hp(2.4),
+                      }}
+                    />
+                  </View>
+                </Pressable>
+              </DashFull>
+
               <DashFull title="Breakfast" imageSource={BreakFast} />
               <DashFull title="Desert" icon={<DesertIcon />} />
               {/* will take a second look at this */}
@@ -103,7 +105,7 @@ function HomeScreen({icon}) {
                   <View>
                     <Text style={styles.textStyle}>Your Order</Text>
                   </View>
-                  <FlexText />
+
                   <Pressable
                     style={[styles.Justbutton, styles.buttonClose]}
                     onPress={() => setModalVisible(!modalVisible)}>

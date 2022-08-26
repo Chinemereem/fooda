@@ -8,7 +8,7 @@ import {
 } from 'react-native-responsive-screen';
 import {SemiBoldText} from '../Text';
 import {Card} from 'react-native-elements';
-import * as colors from 'react-native/Libraries/NewAppScreen';
+import * as colors from '../NewAppScreen';
 
 const FoodCard = ({icon, foodImageBg, onPress, title, style}) => {
   return (

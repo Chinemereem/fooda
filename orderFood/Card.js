@@ -1,7 +1,7 @@
 /* eslint-disable import/no-cycle */
 import React from 'react';
 import {ImageBackground, StyleSheet, View} from 'react-native';
-import * as colors from 'react-native/Libraries/NewAppScreen';
+import * as colors from '../NewAppScreen';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,

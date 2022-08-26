@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text} from 'react-native';
-import {Black} from 'react-native/Libraries/NewAppScreen';
+import {Black} from '../NewAppScreen';
 import {heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const SemiBoldText = ({
@@ -24,7 +24,6 @@ export {SemiBoldText};
 
 const styles = StyleSheet.create({
   semiBoldTextStyle: {
-    fontFamily: 'Gilroy-Semibold',
     fontSize: hp(14),
   },
 });

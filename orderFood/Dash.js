@@ -7,7 +7,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import * as colors from 'react-native/Libraries/NewAppScreen';
+import * as colors from '../NewAppScreen';
 
 export const DashFull = ({title, icon, onPress, disabled, imageSource}) => (
   <TouchableOpacity
