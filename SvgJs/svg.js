@@ -286,3 +286,71 @@ export const SearchIcon = ({...props}) => (
     />
   </Svg>
 );
+
+export const UserIcon = ({...props}) => (
+  <Svg
+    width="18"
+    height="20"
+    viewBox="0 0 18 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}>
+    <Path
+      d="M17 18.3333V16.4074C17 15.3858 16.5786 14.4061 15.8284 13.6837C15.0783 12.9614 14.0609 12.5556 13 12.5556H5C3.93913 12.5556 2.92172 12.9614 2.17157 13.6837C1.42143 14.4061 1 15.3858 1 16.4074V18.3333"
+      stroke="#C6C7CA"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <Path
+      d="M9 8.7037C11.2091 8.7037 13 6.97917 13 4.85185C13 2.72453 11.2091 1 9 1C6.79086 1 5 2.72453 5 4.85185C5 6.97917 6.79086 8.7037 9 8.7037Z"
+      stroke="#C6C7CA"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </Svg>
+);
+
+export const OtherIcon = ({...props}) => (
+  <Svg
+    width="14"
+    height="17"
+    viewBox="0 0 14 17"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}>
+    <Path
+      d="M13 16L7 11.8333L1 16V2.66667C1 2.22464 1.18061 1.80072 1.5021 1.48816C1.82359 1.17559 2.25963 1 2.71429 1H11.2857C11.7404 1 12.1764 1.17559 12.4979 1.48816C12.8194 1.80072 13 2.22464 13 2.66667V16Z"
+      stroke="#C6C7CA"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </Svg>
+);
+
+export const ClockrIcon = ({...props}) => (
+  <Svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}>
+    <Path
+      d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z"
+      stroke="#0A191E"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <Path
+      d="M8 3.8V8L10.8 9.4"
+      stroke="#0A191E"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </Svg>
+);

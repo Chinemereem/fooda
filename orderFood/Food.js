@@ -18,7 +18,7 @@ import {FlexStack} from './View';
 import SearchInput from '../Text/SearchInput';
 import {Card} from './Card';
 import {DesertIcon, LunchIcon, XIcon, SearchIcon} from '../SvgJs/svg';
-
+import ModalView from './ModalView';
 import DisplayAnImageWithStyle from '../imageDisplay/index';
 import {SemiBoldText} from '../Text';
 import {Colors} from '../NewAppScreen';
@@ -63,7 +63,6 @@ function HomeScreen({icon}) {
             transparent={true}
             visible={modalVisible}
             onRequestClose={() => {
-              Alert.alert('Modal has been closed.');
               setModalVisible(!modalVisible);
             }}>
             <View style={styles.centeredView}>
@@ -88,14 +87,15 @@ function HomeScreen({icon}) {
                     style={[styles.Justbutton, styles.buttonClose]}
                     onPress={() => setModalVisible(!modalVisible)}>
                     <XIcon style={{alignSelf: 'center'}} />
-                    <Text style={styles.modalText}>Hide Me</Text>
                   </Pressable>
+                  <ModalView />
                 </View>
               </View>
             </View>
           </Modal>
         </View>
         {icon}
+
         <DisplayAnImageWithStyle />
       </ScrollView>
     </SafeAreaView>

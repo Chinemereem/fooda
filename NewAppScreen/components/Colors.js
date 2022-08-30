@@ -16,4 +16,9 @@ export default {
   dark: '#444',
   darker: '#222',
   black: '#000',
+  Primary: '#006156',
+  Manatee: '#979AA5',
+  DeepYellow: '#FECA57',
+  LightYelow: '#E6B64E',
+  someYellew: '#FEEBC1',
 };
