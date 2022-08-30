@@ -9,6 +9,7 @@ export const FoodStyle = StyleSheet.create({
     minHeight: hp(10),
     marginTop: hp(1),
     marginBottom: hp(0),
+    backgroundColor: '#ffff',
   },
   section: {marginTop: hp(12)},
 
@@ -40,10 +41,10 @@ export const FoodStyle = StyleSheet.create({
     elevation: 2,
   },
   Justbutton: {
-    borderRadius: 20,
-    padding: 12,
-    elevation: 2,
-    marginTop: hp(-6),
+    backgroundColor: '#F1F2F6',
+    padding: 7,
+    borderRadius: 6,
+    marginRight: hp(5),
   },
   buttonOpen: {
     backgroundColor: '#31B9CC',
@@ -51,9 +52,7 @@ export const FoodStyle = StyleSheet.create({
     height: hp(10),
   },
   buttonClose: {
-    backgroundColor: '#31B9CC',
-    width: wp(30),
-    alignSelf: 'center',
+    alignSelf: 'flex-end',
   },
 
   modalText: {

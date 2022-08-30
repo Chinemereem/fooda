@@ -9,6 +9,7 @@ import {
 import {SemiBoldText} from '../Text';
 import {Card} from 'react-native-elements';
 import * as colors from '../NewAppScreen';
+import {FlexStack} from '../orderFood/View';
 
 const FoodCard = ({icon, foodImageBg, onPress, title, style}) => {
   return (
@@ -33,60 +34,57 @@ const DisplayAnImageWithStyle = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.textStyle}>Lunch Restaraunts Near You</Text>
-      <Card
-        containerStyle={{
-          backgroundColor: '#E5E5E5',
-          borderRadius: 10,
-          height: '38%',
-        }}
-        wrapperStyle={{}}>
-        <View
-          style={{
-            position: 'relative',
-          }}>
-          <FoodCard foodImageBg={DoughNut} />
+      <View
+        style={[
+          {
+            flexDirection: 'row',
+            justifyContent: 'center',
+          },
+        ]}>
+        <View style={styles.viewStyle}>
+          <Image source={DoughNut} style={{alignSelf: 'center'}} />
           <View style={styles.lightTextStyle}>
             <Text style={styles.LtextStyle}>10 miles</Text>
           </View>
-          <Card.Title style={styles.cardStyle}>Noah’s Bagels</Card.Title>
-          <Card.Title
+          <Text style={styles.cardStyle}>Noah’s Bagels</Text>
+          <Text
             style={{
-              marginLeft: hp(-26.3),
-              marginTop: hp(1),
               color: '#8F9698',
             }}>
             Lunch . American . $$
-          </Card.Title>
-          <View
-            style={{
-              marginBottom: hp(4),
-              marginTop: hp(-1),
-              marginRight: hp(1),
-            }}>
-            <FoodCard icon={<EmojiIcon />} title="97%" />
-          </View>
+          </Text>
+          <FlexStack>
+            <EmojiIcon />
+            <Text style={{color: '#31B9CC', marginLeft: 2}}>97%</Text>
+          </FlexStack>
         </View>
-      </Card>
+      </View>
 
-      <Card
-        containerStyle={{
-          backgroundColor: '#E5E5E5',
-          borderRadius: 10,
-          marginBottom: hp(5),
-        }}
-        wrapperStyle={{}}>
-        <Card.Divider />
+      <View
+        style={[
+          {
+            flexDirection: 'row',
+            justifyContent: 'center',
+          },
+        ]}>
         <View
-          style={{
-            position: 'relative',
-          }}>
-          <FoodCard foodImageBg={TofuMeal} />
+          style={[
+            styles.viewStyle,
+            {
+              marginTop: hp(3),
+            },
+          ]}>
+          <Image source={DoughNut} style={{alignSelf: 'center'}} />
           <View style={styles.lightTextStyle}>
-            <Text style={styles.LtextStyle}>15 miles</Text>
+            <Text style={styles.LtextStyle}>10 miles</Text>
           </View>
-          <Card.Title style={styles.cardStyle}>Pho Saigon</Card.Title>
+          <Text style={styles.cardStyle}>Pho Saigon</Text>
+
+          <FlexStack>
+            <EmojiIcon />
+          </FlexStack>
         </View>
-      </Card>
+      </View>
     </View>
   );
 };
@@ -96,38 +94,44 @@ const styles = StyleSheet.create({
     paddingTop: hp(5),
     backgroundColor: '#FFFF',
   },
+  viewStyle: {
+    backgroundColor: '#F1F2F6',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 3,
+      height: 4,
+    },
+    shadowOpacity: 1,
+    shadowRadius: 4,
+    elevation: 5,
+    borderRadius: 10,
+    width: '90%',
+    padding: 15,
 
+    height: '100%',
+  },
   textStyle: {
     fontWeight: '500',
-    position: 'absolute',
-    left: '7.47%',
     lineHeight: hp(4),
     fontSize: hp(2.3),
     color: '#0A191E',
     marginTop: 20,
+    marginLeft: hp(3),
   },
   lightTextStyle: {
-    position: 'absolute',
-    left: 15,
-    top: hp(10),
-    backgroundColor: 'rgba(241, 242, 246, 0.35)',
-    width: hp(9),
-    height: hp(5),
+    backgroundColor: '#F1F2F6',
+    width: wp(25),
+    padding: 10,
     borderRadius: 10,
-    textAlign: 'center',
+    marginTop: hp(-7),
+    marginLeft: hp(0),
   },
   LtextStyle: {
-    textAlign: 'center',
     color: '#0A191E',
-    position: 'absolute',
-    top: hp(1),
-    bottom: hp(1),
-    left: hp(1),
   },
   cardStyle: {
     color: '#0A191E',
-    position: 'absolute',
-    top: hp(21),
+    marginTop: hp(1),
   },
   SemiTextStyle: {
     fontSize: hp(-2),

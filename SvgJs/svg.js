@@ -330,25 +330,25 @@ export const OtherIcon = ({...props}) => (
   </Svg>
 );
 
-export const ClockrIcon = ({...props}) => (
+export const ForwardIcon = ({...props}) => (
   <Svg
-    width="16"
-    height="16"
-    viewBox="0 0 16 16"
+    width="14"
+    height="9"
+    viewBox="0 0 14 9"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}>
     <Path
-      d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z"
-      stroke="#0A191E"
-      stroke-width="1.5"
+      d="M1 4.5L13 4.5"
+      stroke="black"
+      stroke-width="1.3"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
     <Path
-      d="M8 3.8V8L10.8 9.4"
-      stroke="#0A191E"
-      stroke-width="1.5"
+      d="M9.5 1L13 4.5L9.5 8"
+      stroke="black"
+      stroke-width="1.3"
       stroke-linecap="round"
       stroke-linejoin="round"
     />

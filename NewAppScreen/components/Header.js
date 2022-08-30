@@ -7,33 +7,20 @@ import {
 } from 'react-native';
 import React from 'react';
 import Colors from './Colors';
-import HermesBadge from './HermesBadge';
+
 import {FlexStack} from '../../orderFood/View';
 import {HomeBoxIcon} from '../../SvgJs/svg.js';
 
 const Header = () => {
-  const isDarkMode = useColorScheme() === 'dark';
   return (
     <ImageBackground
       accessibilityRole="image"
       testID="new-app-screen-header"
-      style={[
-        styles.background,
-        {
-          backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-        },
-      ]}>
-      <HermesBadge />
+      style={[styles.background]}>
       <FlexStack>
         <View>
           <View style={styles.headerStyle}>
-            <Text
-              style={[
-                styles.text,
-                {
-                  color: isDarkMode ? Colors.white : Colors.black,
-                },
-              ]}>
+            <Text style={[styles.text]}>
               What do you{'\n'}
               have a taste for?
             </Text>
@@ -64,6 +51,7 @@ const styles = StyleSheet.create({
     paddingBottom: 40,
     paddingTop: 96,
     paddingHorizontal: 32,
+    backgroundColor: '#ffff',
   },
   headerStyle: {
     width: 230,
@@ -74,6 +62,15 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     textAlign: 'center',
     color: 'red',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 1,
+    shadowRadius: 4,
+    elevation: 5,
+
     lineHeight: 29,
   },
   viewStyle: {

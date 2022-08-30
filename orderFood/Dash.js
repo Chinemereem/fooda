@@ -31,8 +31,18 @@ export const DashFull = ({
               height: hp(10),
               justifyContent: 'center',
               alignItems: 'center',
-              backgroundColor: 'gray',
+              backgroundColor: '#F1F2F6',
               borderRadius: hp(2),
+              padding: 10,
+
+              shadowColor: '#2C2C2C',
+              shadowOffset: {
+                width: 0,
+                height: 4,
+              },
+              shadowOpacity: 1,
+              shadowRadius: 4,
+              elevation: 5,
             },
             style,
           ]}>
@@ -69,11 +79,11 @@ const styles = StyleSheet.create({
     marginRight: hp(5),
   },
   DashFullIconContainer: {
-    width: wp(20),
+    width: wp(70),
     height: hp(10),
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'gray',
+    backgroundColor: 'red',
     borderRadius: hp(2),
   },
   iconStyle: {

@@ -3,18 +3,19 @@ import {
   View,
   Text,
   StyleSheet,
-  TouchableOpacity,
-  ImageBackground,
   Image,
+  ScrollView,
+  SafeAreaView,
+  StatusBar,
 } from 'react-native';
 import {FlexStack} from './View';
-import {ClockIcon, CarIcon, XIcon, SearchIcon} from '../SvgJs/svg';
+import {ClockIcon, CarIcon, ForwardIcon, DeleteIcon} from '../SvgJs/svg';
 import {Colors} from '../NewAppScreen';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import {RectangleImage} from '../assets/images';
+import {RectangleImage, HalfRectangleImage} from '../assets/images';
 import {DashFull} from './Dash';
 const Bold = props => (
   <Text style={{fontWeight: 'bold'}}>{props.children}</Text>
@@ -22,12 +23,14 @@ const Bold = props => (
 
 const ModalView = () => {
   return (
-    <ImageBackground>
-      <TouchableOpacity>
+    <SafeAreaView style={styles.container}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        showsHorizontalScrollIndicator={false}>
         <View style={styles.viewStyle}>
           <View
             style={[
-              styles.container,
+              styles.container1,
               {
                 flexDirection: 'row',
               },
@@ -45,13 +48,13 @@ const ModalView = () => {
                   <ClockIcon />
                 </View>
 
-                <Bold
+                <Text
                   style={{
-                    backgroundColor: 'red',
-                    marginRight: 50,
+                    fontWeight: '700',
+                    marginLeft: 8,
                   }}>
                   30 mins
-                </Bold>
+                </Text>
               </FlexStack>
             </View>
 
@@ -66,31 +69,75 @@ const ModalView = () => {
         <View style={styles.secViewStyle}>
           <View
             style={[
-              styles.container,
+              styles.container1,
               {
                 flexDirection: 'row',
               },
             ]}>
             <Image source={RectangleImage} />
             <View
-              style={{flex: 1, minWidth: '35%', marginLeft: 15, marginTop: 5}}>
+              style={{
+                flex: 1,
+                minWidth: '35%',
+                marginLeft: 15,
+                marginTop: 5,
+              }}>
               <Bold>Chicken, Cashew,{'\n'}and Avocado Salad</Bold>
               <Text style={{marginTop: 5}}>The Plant Cafe</Text>
             </View>
-            <View style={{flex: 2, marginLeft: hp(4)}}>
+            <View style={{flex: 2, marginLeft: hp(2)}}>
               <Text>$15.00 x1</Text>
+            </View>
+          </View>
+        </View>
+
+        <View style={styles.ThirdViewStyle}>
+          <View
+            style={[
+              styles.container1,
+              {
+                flexDirection: 'row',
+              },
+            ]}>
+            <Image source={HalfRectangleImage} />
+            <View
+              style={{
+                flex: 1,
+                minWidth: '35%',
+
+                marginLeft: 18,
+                marginTop: 5,
+              }}>
+              <Bold>Vegan Mac & Cheese</Bold>
+              <Text style={{marginTop: 5}}>The Plant Cafe</Text>
+            </View>
+            <View style={{flex: 2, marginLeft: hp(1), minWidth: '20%'}}>
+              <Text>$14.00 x2</Text>
+            </View>
+            <View style={{flex: 3, marginLeft: hp(7)}}>
+              <DeleteIcon />
             </View>
           </View>
 
           <View
             style={[
-              styles.container,
+              styles.container1,
               {
                 flexDirection: 'row',
-                marginTop: hp(10),
+                marginTop: hp(3),
+                marginLeft: 10,
               },
             ]}>
-            <CarIcon />
+            <View
+              style={{
+                backgroundColor: Colors.someYellew,
+                width: wp(15),
+                height: hp(5),
+                padding: 10,
+                alignItems: 'center',
+              }}>
+              <CarIcon />
+            </View>
             <View style={{flex: 1, minWidth: '35%', marginLeft: 15}}>
               <Bold>Delivery Fee</Bold>
             </View>
@@ -99,20 +146,52 @@ const ModalView = () => {
             </View>
           </View>
         </View>
-      </TouchableOpacity>
-    </ImageBackground>
+        <View
+          style={[
+            styles.container1,
+            {
+              flexDirection: 'row',
+              marginTop: hp(3),
+              marginLeft: 2,
+            },
+          ]}>
+          <View style={{flex: 1, minWidth: '35%', marginLeft: 15}}>
+            <Text style={{fontSize: 17, fontWeight: '700'}}>Total: $17.50</Text>
+          </View>
+          <View
+            style={{
+              flex: 2,
+              marginLeft: hp(4),
+              backgroundColor: '#31B9CC',
+              borderRadius: 6,
+              padding: 13,
+              alignItems: 'center',
+            }}>
+            <Text>
+              Place Order <ForwardIcon />
+            </Text>
+          </View>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: StatusBar.currentHeight,
+    width: wp(90),
+    height: '100%',
+  },
+  container1: {
+    flex: 1,
   },
   viewStyle: {
     backgroundColor: Colors.DeepYellow,
     height: hp(15),
     width: wp(89),
-    marginTop: hp(10),
+    marginTop: hp(2),
     padding: hp(4),
     borderRadius: 5,
   },
@@ -120,8 +199,10 @@ const styles = StyleSheet.create({
     height: hp(15),
     width: wp(89),
     marginTop: hp(3),
-
-    borderRadius: 5,
+  },
+  ThirdViewStyle: {
+    marginTop: hp(3),
+    marginLeft: -10,
   },
 });
 export default ModalView;
