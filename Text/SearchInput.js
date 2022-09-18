@@ -1,17 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {SafeAreaView, StyleSheet, TextInput, Text, View} from 'react-native';
 
 const SearchInput = ({icon}) => {
-  const [text, onChangeText] = React.useState('Useless Text');
-  const [number, onChangeNumber] = React.useState(null);
+  const [text, ChangeText] = useState('');
 
   return (
     <SafeAreaView>
       <TextInput
         style={styles.input}
-        onChangeText={onChangeNumber}
-        value={number}
+        onChangeText={ChangeText}
+        value={text}
         placeholder="Search for a restaraunt"
+        placeholderTextColor="#000"
       />
       <View style={{alignSelf: 'flex-end', marginTop: -40, marginRight: 20}}>
         {icon}
@@ -19,8 +19,9 @@ const SearchInput = ({icon}) => {
       <Text
         style={{
           padding: 20,
+          color: 'black',
         }}>
-        {number}
+        {text}
       </Text>
     </SafeAreaView>
   );

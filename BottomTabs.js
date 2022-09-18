@@ -52,7 +52,7 @@ const MainTabIcon = props => {
 const SettingsScreen = () => {
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Settings!</Text>
+      <Text style={{color: 'black'}}>Work in Progres!</Text>
     </View>
   );
 };
@@ -60,7 +60,7 @@ const SettingsScreen = () => {
 function OtherScreen() {
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Settings!</Text>
+      <Text style={{color: 'black'}}>Work in Progres!</Text>
     </View>
   );
 }
@@ -68,7 +68,7 @@ function OtherScreen() {
 function FourtScreen() {
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Settings!</Text>
+      <Text style={{color: 'black'}}>Work in Progres!</Text>
     </View>
   );
 }

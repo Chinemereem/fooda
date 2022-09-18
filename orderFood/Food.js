@@ -31,6 +31,7 @@ function HomeScreen({icon}) {
   const backgroundStyle = {
     backgroundColor: '#ffff',
   };
+
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />

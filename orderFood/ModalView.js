@@ -18,7 +18,7 @@ import {
 import {RectangleImage, HalfRectangleImage} from '../assets/images';
 import {DashFull} from './Dash';
 const Bold = props => (
-  <Text style={{fontWeight: 'bold'}}>{props.children}</Text>
+  <Text style={{fontWeight: 'bold', color: Colors.dark}}>{props.children}</Text>
 );
 
 const ModalView = () => {
@@ -83,10 +83,12 @@ const ModalView = () => {
                 marginTop: 5,
               }}>
               <Bold>Chicken, Cashew,{'\n'}and Avocado Salad</Bold>
-              <Text style={{marginTop: 5}}>The Plant Cafe</Text>
+              <Text style={{marginTop: 5, color: Colors.black}}>
+                The Plant Cafe
+              </Text>
             </View>
             <View style={{flex: 2, marginLeft: hp(2)}}>
-              <Text>$15.00 x1</Text>
+              <Text style={{color: Colors.dark}}>$15.00 x1</Text>
             </View>
           </View>
         </View>
@@ -109,10 +111,12 @@ const ModalView = () => {
                 marginTop: 5,
               }}>
               <Bold>Vegan Mac & Cheese</Bold>
-              <Text style={{marginTop: 5}}>The Plant Cafe</Text>
+              <Text style={{marginTop: 5, color: Colors.dark}}>
+                The Plant Cafe
+              </Text>
             </View>
             <View style={{flex: 2, marginLeft: hp(1), minWidth: '20%'}}>
-              <Text>$14.00 x2</Text>
+              <Text style={{marginTop: 5, color: Colors.dark}}>$14.00 x2</Text>
             </View>
             <View style={{flex: 3, marginLeft: hp(7)}}>
               <DeleteIcon />
@@ -142,7 +146,7 @@ const ModalView = () => {
               <Bold>Delivery Fee</Bold>
             </View>
             <View style={{flex: 2, marginLeft: hp(4)}}>
-              <Text>$2.50</Text>
+              <Text style={{marginTop: 5, color: Colors.dark}}>$2.50</Text>
             </View>
           </View>
         </View>
@@ -156,7 +160,9 @@ const ModalView = () => {
             },
           ]}>
           <View style={{flex: 1, minWidth: '35%', marginLeft: 15}}>
-            <Text style={{fontSize: 17, fontWeight: '700'}}>Total: $17.50</Text>
+            <Text style={{fontSize: 17, fontWeight: '700', color: Colors.dark}}>
+              Total: $17.50
+            </Text>
           </View>
           <View
             style={{

@@ -6,7 +6,7 @@ import {
   View,
 } from 'react-native';
 import React from 'react';
-import Colors from './Colors';
+import {heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 import {FlexStack} from '../../orderFood/View';
 import {HomeBoxIcon} from '../../SvgJs/svg.js';
@@ -54,8 +54,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffff',
   },
   headerStyle: {
-    width: 230,
-    marginLeft: -8,
+    marginLeft: hp(2),
   },
   text: {
     fontSize: 30,

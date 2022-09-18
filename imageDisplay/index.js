@@ -1,5 +1,12 @@
 import React from 'react';
-import {View, Image, StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  ImageBackground,
+} from 'react-native';
 import {EmojiIcon} from '../SvgJs/svg';
 import {DoughNut, TofuMeal} from '../assets/images';
 import {
@@ -42,10 +49,14 @@ const DisplayAnImageWithStyle = () => {
           },
         ]}>
         <View style={styles.viewStyle}>
-          <Image source={DoughNut} style={{alignSelf: 'center'}} />
-          <View style={styles.lightTextStyle}>
-            <Text style={styles.LtextStyle}>10 miles</Text>
-          </View>
+          <ImageBackground
+            source={TofuMeal}
+            style={{width: '100%', height: hp(15)}}>
+            <View style={styles.lightTextStyle}>
+              <Text style={styles.LtextStyle}>10 miles</Text>
+            </View>
+          </ImageBackground>
+
           <Text style={styles.cardStyle}>Noah’s Bagels</Text>
           <Text
             style={{
@@ -74,10 +85,13 @@ const DisplayAnImageWithStyle = () => {
               marginTop: hp(3),
             },
           ]}>
-          <Image source={DoughNut} style={{alignSelf: 'center'}} />
-          <View style={styles.lightTextStyle}>
-            <Text style={styles.LtextStyle}>10 miles</Text>
-          </View>
+          <ImageBackground
+            source={DoughNut}
+            style={{width: '100%', height: hp(15)}}>
+            <View style={styles.lightTextStyle}>
+              <Text style={styles.LtextStyle}>10 miles</Text>
+            </View>
+          </ImageBackground>
           <Text style={styles.cardStyle}>Pho Saigon</Text>
 
           <FlexStack>
@@ -119,12 +133,13 @@ const styles = StyleSheet.create({
     marginLeft: hp(3),
   },
   lightTextStyle: {
+    alignItems: 'baseline',
     backgroundColor: '#F1F2F6',
     width: wp(25),
     padding: 10,
-    borderRadius: 10,
-    marginTop: hp(-7),
-    marginLeft: hp(0),
+    borderRadius: 5,
+    marginTop: hp(9),
+    marginLeft: hp(1),
   },
   LtextStyle: {
     color: '#0A191E',
